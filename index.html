@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Outbound Guys â ICP Builder</title>
+  <title>The Outbound Guys — ICP Builder</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
   :root {
     --bg: #f5f4f8;
-    --white: #ffffff;
+    --white: #ffffff
     --black: #0d0d0f;
     --purple: #6c3fe0;
-    --purple-light: #8b5cf6;
+    --purple-light: #8b5cf6
     --purple-pale: #ede9fe;
     --purple-mid: #ddd6fe;
     --red: #dc2626;
@@ -137,29 +137,29 @@
   <div class="header-inner">
     <div class="header-badge">The Outbound Guys</div>
     <h1 class="header-title">ICP <span>Builder</span></h1>
-    <p class="header-sub">Answer 6 questions. Get a complete ideal customer profile â ready to use in your outbound.</p>
+    <p class="header-sub">Answer 6 questions. Get a complete ideal customer profile — ready to use in your outbound.</p>
   </div>
 </div>
 <div class="container">
   <div class="input-card">
     <div class="field-group">
       <div class="field-label-row"><span class="step-num">1</span><label class="field-label">What do you sell?</label></div>
-      <textarea id="q1" placeholder="e.g. Done-for-you outbound system for recruitment agencies â cold email campaigns, lead lists, and LinkedIn sequences that book calls consistently."></textarea>
+      <textarea id="q1" placeholder="e.g. Done-for-you outbound system for recruitment agencies — cold email campaigns, lead lists, and LinkedIn sequences that book calls consistently."></textarea>
     </div>
     <div class="field-group">
       <div class="field-label-row"><span class="step-num">2</span><label class="field-label">Who are your best current clients? (if applicable)</label></div>
-      <p class="field-hint">If you have clients, think about your top 3 â what do they have in common? If not, describe your dream client instead.</p>
-      <textarea id="q2" placeholder="e.g. Recruitment agency owners, 2â10 staff, UK-based, running in the tech or finance sector. Or if no clients yet: my ideal client would be..."></textarea>
+      <p class="field-hint">If you have clients, think about your top 3 — what do they have in common? If not, describe your dream client instead.</p>
+      <textarea id="q2" placeholder="e.g. Recruitment agency owners, 2–10 staff, UK-based, running in the tech or finance sector. Or if no clients yet: my ideal client would be..."></textarea>
     </div>
     <div class="field-group">
       <div class="field-label-row"><span class="step-num">3</span><label class="field-label">What problem do they have before they find you?</label></div>
-      <p class="field-hint">Be specific â what are they frustrated by, losing sleep over, or complaining about?</p>
+      <p class="field-hint">Be specific — what are they frustrated by, losing sleep over, or complaining about?</p>
       <textarea id="q3" placeholder="e.g. Feast and famine pipeline. Too reliant on referrals and job boards. No repeatable way to bring in new clients. Tried cold calling but hate it."></textarea>
     </div>
     <div class="field-group">
       <div class="field-label-row"><span class="step-num">4</span><label class="field-label">What result do they get after working with you?</label></div>
-      <p class="field-hint">Specific outcomes â numbers, timelines, what changes in their business.</p>
-      <textarea id="q4" placeholder="e.g. 8â15 booked calls per month within 6 weeks. A predictable, automated outbound system they don't have to think about. Pipeline they control."></textarea>
+      <p class="field-hint">Specific outcomes — numbers, timelines, what changes in their business.</p>
+      <textarea id="q4" placeholder="e.g. 8–15 booked calls per month within 6 weeks. A predictable, automated outbound system they don't have to think about. Pipeline they control."></textarea>
     </div>
     <div class="field-group">
       <div class="field-label-row"><span class="step-num">5</span><label class="field-label">What triggers them to look for a solution like yours?</label></div>
@@ -290,7 +290,7 @@ Q3 - Problem before finding them: ${q3}
 Q4 - Result after working with them: ${q4 || 'not specified'}
 Q5 - Trigger events: ${q5 || 'not specified'}
 Q6 - Common objections: ${q6 || 'not specified'}
-Build a complete, specific, actionable ICP. Be concrete â no generic marketing language.
+Build a complete, specific, actionable ICP. Be concrete — no generic marketing language.
 Return ONLY valid JSON, no markdown, no explanation:
 {
   "industry": ["array of 2-4 specific industries or niches"],
@@ -301,9 +301,9 @@ Return ONLY valid JSON, no markdown, no explanation:
   "painPoints": ["array of 4-6 specific, vivid pain points in plain English"],
   "triggerEvents": ["array of 4-6 specific trigger events or buying signals"],
   "objections": ["array of 3-5 common objections with the exact wording prospects use"],
-  "language": ["array of 5-7 exact phrases or sentences the ICP actually says â in quotes, first person"],
+  "language": ["array of 5-7 exact phrases or sentences the ICP actually says — in quotes, first person"],
   "notWant": ["array of 3-5 things they definitely do NOT want from a vendor"],
-  "summary": "A single sentence ICP summary in this format: [Job title] at [company type] who [situation/pain] and want [outcome] â typically triggered by [event]."
+  "summary": "A single sentence ICP summary in this format: [Job title] at [company type] who [situation/pain] and want [outcome] — typically triggered by [event]."
 }`;
   try {
 
@@ -315,7 +315,7 @@ Return ONLY valid JSON, no markdown, no explanation:
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
-        max_tokens: 1000,
+        max_tokens: 2000,
         messages: [{ role: 'user', content: prompt }]
       })
     });
