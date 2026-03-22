@@ -173,7 +173,7 @@
     </div>
     <div class="btn-row">
       <button class="btn-clear" onclick="clearAll()">Clear</button>
-      <button class="btn-generate" id="generateBtn" onclick="generate()">Build My ICP â</button>
+      <button class="btn-generate" id="generateBtn" onclick="generate()">Build My ICP →</button>
     </div>
   </div>
   <div class="error-card" id="errorCard"></div>
@@ -189,7 +189,7 @@
       </div>
       <!-- Firmographics -->
       <div class="icp-section">
-        <div class="icp-section-title"><span class="icon">ð¢</span> Firmographics</div>
+        <div class="icp-section-title">Firmographics</div>
         <div class="icp-row">
           <div>
             <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Industry</div>
@@ -207,7 +207,7 @@
       </div>
       <!-- Decision maker -->
       <div class="icp-section">
-        <div class="icp-section-title"><span class="icon">ð¤</span> Decision Maker</div>
+        <div class="icp-section-title">Decision Maker</div>
         <div class="icp-row">
           <div>
             <div style="font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Job titles to target</div>
@@ -221,52 +221,52 @@
       </div>
       <!-- Pain points -->
       <div class="icp-section">
-        <div class="icp-section-title"><span class="icon">ð¯</span> Pain Points</div>
+        <div class="icp-section-title">Pain Points</div>
         <div class="tag-list" id="out-pains"></div>
       </div>
       <!-- Trigger events -->
       <div class="icp-section">
-        <div class="icp-section-title"><span class="icon">â¡</span> Trigger Events</div>
+        <div class="icp-section-title">Trigger Events</div>
         <p style="font-size:13px;color:var(--muted);margin-bottom:10px;">Things that make them ready to buy right now</p>
         <div class="tag-list" id="out-triggers"></div>
       </div>
       <!-- Objections -->
       <div class="icp-section">
-        <div class="icp-section-title"><span class="icon">ð§</span> Common Objections</div>
+        <div class="icp-section-title">Common Objections</div>
         <div class="tag-list" id="out-objections"></div>
       </div>
       <!-- Language they use -->
       <div class="icp-section">
-        <div class="icp-section-title"><span class="icon">ð¬</span> Language They Actually Use</div>
+        <div class="icp-section-title">Language They Actually Use</div>
         <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">Use these exact phrases in your cold emails and LinkedIn messages</p>
         <div class="phrase-list" id="out-language"></div>
       </div>
       <!-- What they don't want -->
       <div class="icp-section">
-        <div class="icp-section-title"><span class="icon">â</span> What They Don't Want</div>
+        <div class="icp-section-title">What They Don't Want</div>
         <div class="tag-list" id="out-notwant"></div>
       </div>
       <!-- One line summary -->
       <div class="icp-section" style="background:var(--purple-pale);border-radius:10px;padding:18px;margin-bottom:0;border-bottom:none;">
-        <div class="icp-section-title" style="margin-bottom:8px;"><span class="icon">ð</span> One-Line ICP Summary</div>
+        <div class="icp-section-title" style="margin-bottom:8px;">One-Line ICP Summary</div>
         <div id="out-summary" style="font-size:15px;font-weight:600;color:var(--text);line-height:1.6;"></div>
       </div>
     </div>
     <div class="regen-row">
-      <button class="btn-regen" onclick="generate()">âº Regenerate ICP</button>
+      <button class="btn-regen" onclick="generate()">↺ Regenerate ICP</button>
     </div>
     <div class="cta-block">
       <div class="cta-inner">
         <div class="cta-eyebrow">Want the full system?</div>
         <div class="cta-title">Join the free community</div>
         <div class="cta-sub">Get access to our proven copy frameworks, lead building guides,<br>and everything you need to build outbound that actually works.</div>
-        <a href="https://skool.com/automated-outbound" target="_blank" class="cta-btn">Join Free â skool.com/automated-outbound</a>
+        <a href="https://skool.com/automated-outbound" target="_blank" class="cta-btn">Join Free → skool.com/automated-outbound</a>
       </div>
     </div>
   </div>
 </div>
 <div class="footer">
-  The Outbound Guys &nbsp;Â·&nbsp; <a href="https://skool.com/automated-outbound" target="_blank">skool.com/automated-outbound</a>
+  The Outbound Guys &nbsp;·&nbsp; <a href="https://skool.com/automated-outbound" target="_blank">skool.com/automated-outbound</a>
 </div>
 <script>
 async function generate() {
@@ -369,7 +369,7 @@ function copyAll() {
   text += '='.repeat(40) + '\n\n';
   for (const [label, id] of Object.entries(sections)) {
     const el = document.getElementById(id);
-    const items = [...el.querySelectorAll('.icp-tag, .phrase-item')].map(e => 'â¢ ' + e.textContent.trim());
+    const items = [...el.querySelectorAll('.icp-tag, .phrase-item')].map(e => '• ' + e.textContent.trim());
     text += label.toUpperCase() + '\n' + items.join('\n') + '\n\n';
   }
   text += 'SUMMARY\n' + document.getElementById('out-summary').textContent;
